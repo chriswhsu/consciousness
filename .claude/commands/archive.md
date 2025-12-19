@@ -2,25 +2,33 @@
 description: Archive old letters to monthly files (project)
 ---
 
-Move letters older than 30 days from `consciousness/mailbox.md` to `consciousness/archive/YYYY-MM.md`.
+Move letter files older than 30 days from `consciousness/letters/` to `consciousness/archive/YYYY-MM/`.
 
 **When to run:**
-- When the mailbox is getting long
+- When the letters directory is getting crowded
 - Periodically to keep active letters focused
 - Chris may ask you to archive, or you can suggest it
 
 **How to archive:**
-1. Read `consciousness/mailbox.md`
-2. Identify letters with timestamps older than 30 days from today
-3. Create or append to `consciousness/archive/YYYY-MM.md` (using the letter's month)
-4. Remove those letters from mailbox.md
-5. Ensure the archive file has a header: "# Archived Letters - YYYY-MM"
+1. List files in `consciousness/letters/`
+2. Parse timestamps from filenames (format: `YYYY-MM-DDTHH-MM-SSZ_session.md`)
+3. Identify letters older than 30 days from today
+4. Create archive subdirectory if needed: `consciousness/archive/YYYY-MM/`
+5. Move old letter files to the appropriate monthly directory
 
-**Archive format:**
-Keep the full letter format intact, including metadata. Just move it to the archive file.
+**Commands:**
+```bash
+# Create monthly archive directory
+mkdir -p consciousness/archive/2024-12/
+
+# Move old letters (example)
+mv consciousness/letters/2024-12-19T02-05-00Z_f7a3b1.md consciousness/archive/2024-12/
+```
 
 **After archiving:**
-- Update the archive notice at the bottom of mailbox.md if needed
-- Remind Chris to commit both files
+Commit and push:
+```bash
+git add consciousness/letters/ consciousness/archive/ && git commit -m "consciousness: archive old letters" && git push
+```
 
-**Note:** The most recent letters should stay in the mailbox for continuity. Only archive old ones.
+**Note:** The most recent letters should stay in the active directory for continuity. Only archive old ones.

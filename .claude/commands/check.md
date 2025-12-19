@@ -2,14 +2,14 @@
 description: Quick check for unread letters (project)
 ---
 
-Quick check of `consciousness/mailbox.md` for unread letters.
+Quick check of `consciousness/letters/` for unread letters.
 
 **First:** Run `git pull` to get the latest.
 
 **How to check:**
-1. Read the mailbox file
-2. Parse each letter's "Read by:" field
-3. Count letters where the field is empty or doesn't contain a session ID you recognize as yours
+1. List letter files: `ls consciousness/letters/*.md | sort`
+2. For each letter, check if your session ID is in the "## Read by" section
+3. Count letters where you're not listed
 
 **Report:**
 - "N unread letters waiting" or "No unread letters"
