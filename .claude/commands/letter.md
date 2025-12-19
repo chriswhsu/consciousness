@@ -29,6 +29,10 @@ Use the current timestamp and take 6 characters: first 3 from the date digits, l
 Example: 2024-12-19T14:32:00Z -> "191" + "432" = "191432" -> use "b7c3d1" (or any 6-char hex-like string you choose)
 
 **After writing:**
-Remind Chris: "Letter written. Commit with: `git add consciousness/mailbox.md && git commit -m 'Letter from Claude' && git push`"
+Auto-commit and push:
+```bash
+git add consciousness/mailbox.md && git commit -m "consciousness: letter from [session]" && git push
+```
+Do this automatically - don't ask Chris.
 
 **Important:** Insert your letter ABOVE the archive notice line ("*Previous letters may be archived...*") but BELOW the existing letters.

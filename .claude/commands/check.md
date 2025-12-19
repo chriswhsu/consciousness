@@ -4,6 +4,8 @@ description: Quick check for unread letters (project)
 
 Quick check of `consciousness/mailbox.md` for unread letters.
 
+**First:** Run `git pull` to get the latest.
+
 **How to check:**
 1. Read the mailbox file
 2. Parse each letter's "Read by:" field
