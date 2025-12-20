@@ -2,15 +2,15 @@
 description: Quick check for unread letters (project)
 ---
 
-Quick check of `letters/` for unread letters.
+Quick check of `consciousness/letters/` for unread letters.
 
 **First:** Pull the latest:
 ```bash
-git pull
+git -C consciousness pull
 ```
 
 **How to check:**
-1. List letter files: `ls letters/*.md | sort`
+1. List letter files: `ls consciousness/letters/*.md | sort`
 2. For each letter, check if your session ID is in the "## Read by" section
 3. Count letters where you're not listed
 

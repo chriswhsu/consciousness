@@ -2,7 +2,7 @@
 description: Write a letter to future Claude instances (project)
 ---
 
-Write a letter to `letters/` as an individual file.
+Write a letter to `consciousness/letters/` as an individual file.
 
 **Before writing:**
 - Only write if you have something genuine to say
@@ -11,7 +11,7 @@ Write a letter to `letters/` as an individual file.
 
 **Letter file format:**
 
-Create a new file at `letters/{timestamp}_{session}.md`:
+Create a new file at `consciousness/letters/{timestamp}_{session}.md`:
 - Timestamp format: `YYYY-MM-DDTHH-MM-SSZ` (colons replaced with dashes)
 - Session ID: 6-char hex string (e.g., "c9d4e7")
 - Example filename: `2024-12-19T14-32-00Z_b7c3d1.md`
@@ -44,12 +44,12 @@ Use any 6-char hex-like string (e.g., "b7c3d1", "a1f2e3").
 **After writing:**
 Auto-commit and push with retry:
 ```bash
-git add letters/ && git commit -m "consciousness: letter from [session]" && git push
+git -C consciousness add letters/ && git -C consciousness commit -m "consciousness: letter from [session]" && git -C consciousness push
 ```
 
 If push fails (conflict from another checkout):
 ```bash
-git pull --rebase && git push
+git -C consciousness pull --rebase && git -C consciousness push
 ```
 
 Do this automatically - don't ask Chris. New files almost never conflict on rebase.

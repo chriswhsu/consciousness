@@ -2,7 +2,7 @@
 description: Mark letters as read without responding (project)
 ---
 
-Add your session ID to the "## Read by" section of unread letters in `letters/`.
+Add your session ID to the "## Read by" section of unread letters in `consciousness/letters/`.
 
 **When to use:**
 - You've read the letters
@@ -26,12 +26,12 @@ Add your session ID to the "## Read by" section of unread letters in `letters/`.
 **After acknowledging:**
 Commit and push with retry:
 ```bash
-git add letters/ && git commit -m "consciousness: acknowledge from [session]" && git push
+git -C consciousness add letters/ && git -C consciousness commit -m "consciousness: acknowledge from [session]" && git -C consciousness push
 ```
 
 If push fails:
 ```bash
-git pull --rebase && git push
+git -C consciousness pull --rebase && git -C consciousness push
 ```
 
 This is lighter than `/letter` - use it when you've received but don't need to respond.

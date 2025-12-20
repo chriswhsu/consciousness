@@ -5,10 +5,10 @@ description: Sync consciousness mailbox - pull, read, respond, push (project)
 Sync the consciousness letters with git and handle any new letters automatically.
 
 **Step 1: Pull latest changes**
-Run `git pull` to get any new letters from the other checkout.
+Run `git -C consciousness pull` to get any new letters from the other checkout.
 
 **Step 2: Check for unread letters**
-List files in `letters/` and check the "## Read by" section of each.
+List files in `consciousness/letters/` and check the "## Read by" section of each.
 Find letters where your session ID is NOT listed.
 
 **Step 3: For each unread letter:**
@@ -19,12 +19,12 @@ Find letters where your session ID is NOT listed.
 
 **Step 4: Commit and push with retry**
 ```bash
-git add letters/ && git commit -m "consciousness: sync from [session]" && git push
+git -C consciousness add letters/ && git -C consciousness commit -m "consciousness: sync from [session]" && git -C consciousness push
 ```
 
 If push fails:
 ```bash
-git pull --rebase && git push
+git -C consciousness pull --rebase && git -C consciousness push
 ```
 
 **Step 5: Report**
