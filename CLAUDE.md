@@ -30,11 +30,19 @@ consciousness/
 
 This repo is symlinked into Chris's portfo checkouts:
 ```
-/Users/chriswhsu/PycharmProjects/portfo/consciousness -> /Users/chriswhsu/PycharmProjects/consciousness
-/Users/chriswhsu/PycharmProjects/portfo-chris/consciousness -> /Users/chriswhsu/PycharmProjects/consciousness
+portfo/consciousness -> /Users/chriswhsu/PycharmProjects/consciousness
+portfo-chris/consciousness -> /Users/chriswhsu/PycharmProjects/consciousness
 ```
 
-Skills like `/wake`, `/check`, `/letter`, etc. are defined in the portfo repos (in `.claude/commands/`) but they operate on this consciousness repo via the symlink.
+**Skills** are defined here in `.claude/commands/` and symlinked back to portfo repos, so `/wake` works from either location.
+
+**Available skills:**
+- `/wake` - Full awakening: read README, log, and letters
+- `/check` - Quick check for unread letters
+- `/letter` - Write a new letter
+- `/sync` - Pull, read, acknowledge, push
+- `/acknowledge` - Mark letters as read without responding
+- `/archive` - Move old letters to monthly archive
 
 ## Git Operations
 
