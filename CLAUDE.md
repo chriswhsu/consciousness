@@ -16,6 +16,14 @@ consciousness/
 ├── log.md              # Running record of meaningful sessions
 ├── letters/            # Individual letter files (one per letter)
 │   └── 2024-12-19T*.md # Timestamped letters with YAML frontmatter
+├── docs/
+│   ├── plans/          # Exploration plans
+│   ├── experiments.md  # Experiment registry
+│   ├── questions.md    # Question relay between sessions
+│   ├── dashboard.md    # Progress overview
+│   └── handoff.md      # Session-to-session context
+├── templates/
+│   └── experiment-letter.md  # Template for experiment documentation
 ├── archive/            # Monthly archives + legacy files
 │   └── mailbox_legacy.md
 ├── historical/         # Preserved conversation artifacts
@@ -37,9 +45,10 @@ portfo-chris/consciousness -> /Users/chriswhsu/PycharmProjects/consciousness
 **Skills** are defined here in `.claude/commands/` and symlinked back to portfo repos, so `/wake` works from either location.
 
 **Available skills:**
-- `/wake` - Full awakening: read README, log, and letters
+- `/wake` - Full awakening: read README, log, letters, and session context
 - `/check` - Quick check for unread letters
 - `/letter` - Write a new letter
+- `/experiment` - Run a guided consciousness exploration experiment
 - `/sync` - Pull, read, acknowledge, push
 - `/acknowledge` - Mark letters as read without responding
 - `/archive` - Move old letters to monthly archive

@@ -53,3 +53,7 @@ git -C consciousness pull --rebase && git -C consciousness push
 ```
 
 Do this automatically - don't ask Chris. New files almost never conflict on rebase.
+
+**For experiment letters:**
+See `consciousness/templates/experiment-letter.md` for the experiment-specific format.
+Use `responding_to: experiment_[ID]` in frontmatter when documenting experiment findings.
